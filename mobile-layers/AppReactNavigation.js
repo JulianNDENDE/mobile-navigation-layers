@@ -7,9 +7,14 @@ const Tab = createBottomTabNavigator();
 
 const HomeScreen = () => (
   <View style={styles.tabContent}>
-    <Image source={require('./assets/images/home.png')} style={styles.image} />
+    <Image
+      testID='home-image'
+      source={require('./assets/images/home.png')}
+      style={styles.image}
+    />
     <TextInput placeholder="Enter your name" style={styles.input} />
     <FlatList
+      testID='home-flatlist'
       data={[
         { key: '1', name: 'John Doe' },
         { key: '2', name: 'Jane Smith' },
@@ -23,12 +28,13 @@ const HomeScreen = () => (
 const ProfileScreen = () => (
   <View style={styles.tabContent}>
     <Image
+      testID='profile-image'
       source={require('./assets/images/profile.png')}
       style={styles.image}
-      testID="profile-image"
     />
     <TextInput placeholder="Enter your email" style={styles.input} />
     <FlatList
+      testID='profile-flatlist'
       data={[
         { key: '1', email: 'john@example.com' },
         { key: '2', email: 'jane@example.com' },
@@ -41,9 +47,14 @@ const ProfileScreen = () => (
 
 const SettingsScreen = () => (
   <View style={styles.tabContent}>
-    <Image source={require('./assets/images/settings.png')} style={styles.image} />
+    <Image
+      source={require('./assets/images/profile.png')}
+      style={styles.image}
+      testID="settings-image"
+    />
     <TextInput placeholder="Enter your username" style={styles.input} />
     <FlatList
+      testID='settings-flatlist'
       data={[
         { key: '1', username: 'johndoe' },
         { key: '2', username: 'janesmith' },

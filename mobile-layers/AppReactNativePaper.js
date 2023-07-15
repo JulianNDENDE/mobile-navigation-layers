@@ -4,10 +4,11 @@ import { BottomNavigation } from 'react-native-paper';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 const HomeScreen = () => (
-  <View style={styles.tabContent}>
-    <Image source={require('./assets/images/home.png')} style={styles.image} />
-    <TextInput placeholder="Enter your name" style={styles.input} />
+  <View testID="home-screen" style={styles.tabContent}>
+    <Image testID="home-image" source={require('./assets/images/home.png')} style={styles.image} />
+    <TextInput testID="home-input" placeholder="Enter your name" style={styles.input} />
     <FlatList
+      testID="home-flatlist"
       data={[
         { key: '1', name: 'John Doe' },
         { key: '2', name: 'Jane Smith' },
@@ -19,10 +20,11 @@ const HomeScreen = () => (
 );
 
 const ProfileScreen = () => (
-  <View style={styles.tabContent}>
-    <Image source={require('./assets/images/profile.png')} style={styles.image} />
-    <TextInput placeholder="Enter your email" style={styles.input} />
+  <View testID="profile-screen" style={styles.tabContent}>
+    <Image testID="profile-image" source={require('./assets/images/profile.png')} style={styles.image} />
+    <TextInput testID="profile-input" placeholder="Enter your email" style={styles.input} />
     <FlatList
+      testID="profile-flatlist"
       data={[
         { key: '1', email: 'john@example.com' },
         { key: '2', email: 'jane@example.com' },
@@ -34,10 +36,11 @@ const ProfileScreen = () => (
 );
 
 const SettingsScreen = () => (
-  <View style={styles.tabContent}>
-    <Image source={require('./assets/images/settings.png')} style={styles.image} />
-    <TextInput placeholder="Enter your username" style={styles.input} />
+  <View testID="settings-screen" style={styles.tabContent}>
+    <Image testID="settings-image" source={require('./assets/images/settings.png')} style={styles.image} />
+    <TextInput testID="settings-input" placeholder="Enter your username" style={styles.input} />
     <FlatList
+      testID="settings-flatlist"
       data={[
         { key: '1', username: 'johndoe' },
         { key: '2', username: 'janesmith' },

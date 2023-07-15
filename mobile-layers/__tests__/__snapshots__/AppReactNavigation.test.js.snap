@@ -94,6 +94,7 @@ exports[`AppReactNavigation renders correctly 1`] = `
                     "width": 200,
                   }
                 }
+                testID="home-image"
               />
               <TextInput
                 placeholder="Enter your name"
@@ -137,6 +138,7 @@ exports[`AppReactNavigation renders correctly 1`] = `
                 renderItem={[Function]}
                 scrollEventThrottle={50}
                 stickyHeaderIndices={[]}
+                testID="home-flatlist"
                 viewabilityConfigCallbackPairs={[]}
               >
                 <View>
